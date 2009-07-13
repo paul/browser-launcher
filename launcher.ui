@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Launcher</class>
+ <widget class="QDialog" name="Launcher">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>256</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Launcher</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QListWidget" name="lstBrowsers">
+     <item>
+      <property name="text">
+       <string>Firefox 3.5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Firefox 3.5 - Development</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Opera</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Opera10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Konqueror</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnLaunch">
+     <property name="text">
+      <string>L&amp;aunch</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnLaunch</sender>
+   <signal>clicked()</signal>
+   <receiver>Launcher</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lstBrowsers</sender>
+   <signal>itemActivated(QListWidgetItem*)</signal>
+   <receiver>Launcher</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
